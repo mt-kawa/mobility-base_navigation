@@ -4,7 +4,7 @@ services:
   - docker:dind
 
 variables:
-  CI_REGISTRY_IMAGE: "$EL_REGISTRY/kawa/ros-indigo-mb-movebase"
+  CI_REGISTRY_IMAGE: "$EL_REGISTRY/kawa/ros-kinetic-mb-movebase"
 
 before_script:
   - docker info
