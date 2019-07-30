@@ -12,15 +12,13 @@ RUN git clone -b kinetic-devel https://github.com/ros-planning/navigation.git &&
 
 WORKDIR /ros_ws
 
-#RUN apt-get install -y ros-kinetic-tf
-
 SHELL ["/bin/bash", "-c"]	# Change to bash shell for ros stuff
 
 RUN source /opt/ros/kinetic/setup.bash && \
     rosdep install --from-paths src/ --ignore-src --rosdistro kinetic -y && \
     catkin init && \
     catkin config --install && \
-    catkin_make -j 2 -p 1
+    catkin_make -j2
 
 COPY launch-files /launch-files
 COPY run-shells /run-shells
