@@ -8,7 +8,8 @@ RUN mkdir -p /ros_ws/src
 WORKDIR /ros_ws/src
 
 RUN git clone -b kinetic-devel https://github.com/ros-planning/navigation.git && \
-    git clone -b kinetic-devel https://github.com/ros-perception/perception_pcl.git
+    git clone -b kinetic-devel https://github.com/ros-perception/perception_pcl.git && \
+    git clone -b kinetic-devel https://github.com/rst-tu-dortmund/teb_local_planner.git
 
 WORKDIR /ros_ws
 
@@ -18,7 +19,7 @@ RUN source /opt/ros/kinetic/setup.bash && \
     rosdep install --from-paths src/ --ignore-src --rosdistro kinetic -y && \
     catkin init && \
     catkin config --install && \
-    catkin_make -j2
+    catkin_make -j4
 
 COPY launch-files /launch-files
 COPY run-shells /run-shells
