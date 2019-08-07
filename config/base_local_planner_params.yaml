@@ -7,7 +7,7 @@ DWAPlannerROS:
   min_vel_theta: -0.5
   min_in_place_vel_theta: 0.4
 
-  
+
   acc_lim_th: 2.2
   acc_lim_x: 1
   acc_lim_y: 0 # anything but 0  induces shaking
