@@ -7,6 +7,7 @@ shutdown_costmaps: false
 controller_frequency: 10.0
 controller_patience: 15.0
 
+
 planner_frequency: 10.0
 planner_patience: 1.0
 
@@ -14,7 +15,7 @@ oscillation_timeout: 10.0
 oscillation_distance: 0.2
 
 # local planner - default is trajectory rollout
-base_local_planner: "dwa_local_planner/DWAPlannerROS" # alternatives: teb_local_planner, TrajectoryPlannerROS
+base_local_planner: "dwa_local_planner/DWAPlannerROS"
 
 base_global_planner: "global_planner/GlobalPlanner" #alternatives: navfn/NavfnROS, carrot_planner/CarrotPlanner
 
