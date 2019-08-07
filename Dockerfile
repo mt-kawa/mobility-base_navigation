@@ -19,7 +19,7 @@ RUN source /opt/ros/kinetic/setup.bash && \
     rosdep install --from-paths src/ --ignore-src --rosdistro kinetic -y && \
     catkin init && \
     catkin config --install && \
-    catkin_make -j4
+    catkin_make -j2
 
 COPY launch-files /launch-files
 COPY run-shells /run-shells
