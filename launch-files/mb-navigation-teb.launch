@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<launch>
+  <node name="localization" pkg="amcl" type="amcl" args="scan:=laser_birdcage_r2000/scan_filtered" output="screen" required="true">
+    <rosparam file="/config/amcl.yaml" command="load" />
+  </node>
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen" required="true">
+    <param name="base_global_planner" value="global_planner/GlobalPlanner"/>
+    <rosparam file="/config/costmaps/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="/config/costmaps/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="/config/move_base_params.yaml" command="load" />
+    <rosparam file="/config/global/global_planner_params.yaml" command="load" />
+    <rosparam file="/config/local/teb_local_planner_params.yaml" command="load" />
+    <rosparam file="/config/costmaps/local_costmap_params.yaml" command="load" />
+    <rosparam file="/config/costmaps/global_costmap_params.yaml" command="load" />
+  </node>
+</launch>
