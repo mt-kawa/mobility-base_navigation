@@ -12,7 +12,7 @@
     <rosparam file="/config/costmaps/costmap_common_params.yaml" command="load" ns="local_costmap" />
     <rosparam file="/config/move_base_params.yaml" command="load" />
     <rosparam file="/config/global/global_planner_params.yaml" command="load" />
-    <rosparam file="/config/local/dwa_diff_local_planner_params.yaml" command="load" />
+    <rosparam file="/config/local/dwa_holo_local_planner_params.yaml" command="load" />
     <rosparam file="/config/costmaps/local_costmap_params.yaml" command="load" />
     <rosparam file="/config/costmaps/global_costmap_params.yaml" command="load" />
   </node>
