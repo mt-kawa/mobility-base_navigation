@@ -12,7 +12,7 @@ resolution: 0.05
 static_layer:
   map_topic: /map
   subscribe_to_updates: true
-  track_unknown_space: true
+  # track_unknown_space: true
   unknown_cost_value: 253
 
 #robot_radius = ir_of_robot
@@ -23,7 +23,7 @@ obstacle_layer:
   mark_threshold:       0
   combination_method:   1
   track_unknown_space:  true    #true needed for disabling global path planning through unknown space
-  obstacle_range: 4
+  obstacle_range: 3.5
   raytrace_range: 4
   laser_scan_sensor: {
     sensor_frame: laser_birdcage_r2000,
