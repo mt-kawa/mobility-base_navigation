@@ -9,7 +9,8 @@ WORKDIR /ros_ws/src
 
 RUN git clone -b kinetic-devel https://github.com/ros-planning/navigation.git && \
     git clone -b kinetic-devel https://github.com/ros-perception/perception_pcl.git && \
-    git clone -b kinetic-devel https://github.com/rst-tu-dortmund/teb_local_planner.git
+    git clone -b kinetic-devel https://github.com/rst-tu-dortmund/teb_local_planner.git && \
+    git clone -b indigo https://github.com/DLu/navigation_layers.git
 
 WORKDIR /ros_ws
 
