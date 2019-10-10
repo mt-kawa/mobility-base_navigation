@@ -24,11 +24,11 @@ RUN source /opt/ros/kinetic/setup.bash && \
 RUN source /opt/ros/kinetic/setup.bash && \
     catkin init && \
     catkin config --install && \
-    catkin_make -j2 --pkg people_msgs
+    catkin_make -j6 --pkg people_msgs
 
 RUN source /opt/ros/kinetic/setup.bash && \
     catkin config --install && \
-    catkin_make -j2
+    catkin_make -j6
 
 COPY launch-files /launch-files
 COPY run-shells /run-shells
