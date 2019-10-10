@@ -12,6 +12,6 @@ local_costmap:
   plugins:
   - {name: obstacle_layer, type: "costmap_2d::VoxelLayer"}
   - {name: inflation_layer, type: "costmap_2d::InflationLayer"}
-  # - {name: proxemic_layer, type: "social_navigation_layers::ProxemicLayer"}
-  # - {name: passing_layer, type: "social_navigation_layers::PassingLayer"}
+  - {name: proxemic_layer, type: "social_navigation_layers::ProxemicLayer"}
+  - {name: passing_layer, type: "social_navigation_layers::PassingLayer"}
 
