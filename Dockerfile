@@ -12,7 +12,7 @@ RUN git clone -b kinetic-devel https://github.com/ros-planning/navigation.git &&
     git clone -b kinetic-devel https://github.com/rst-tu-dortmund/teb_local_planner.git && \
     git clone -b indigo https://github.com/DLu/navigation_layers.git && \
     git clone -b kinetic https://github.com/wg-perception/people.git && \
-    git clone -b hydro-devel https://github.com/DLu/laser_filtering.git
+    git clone -b hydro_devel https://github.com/DLu/laser_filtering.git
 
 WORKDIR /ros_ws
 
