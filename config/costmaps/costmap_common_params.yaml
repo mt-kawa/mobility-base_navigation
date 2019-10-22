@@ -13,9 +13,11 @@ resolution: 0.05
 
 static_layer:
   map_topic: /map
-  subscribe_to_updates: true
+  #  subscribe_to_updates: true
   unknown_cost_value: 99
-  track_unknown_space: true
+  #  track_unknown_space: true
+  lethal_cost_threshold: 150
+  trinary_costmap: true
 
 #robot_radius = ir_of_robot
 
