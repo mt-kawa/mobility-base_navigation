@@ -38,7 +38,7 @@ obstacle_layer:
   }
 
 inflation_layer:
-  cost_scaling_factor: 2.5 #1 #2.58
+  cost_scaling_factor: 2.58 #1 #2.58
   inflation_radius: 1.75
 
 proxemic_layer:
