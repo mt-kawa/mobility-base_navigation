@@ -26,6 +26,9 @@
   <node name="velocity_tracker" pkg="people_velocity_tracker" type="tracker.py" respawn="true" />
   <!-- <node pkg="people_tracking_filter" type="people_tracker" name="people_tracker" output="screen"/> -->
 
+  <node name="localization" pkg="amcl" type="amcl" args="scan:=laser_birdcage_r2000/scan_filtered" output="screen" required="true">
+    <rosparam file="/config/amcl.yaml" command="load" />
+  </node>
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen" required="true">
     <param name="base_global_planner" value="global_planner/GlobalPlanner"/>
     <param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" />

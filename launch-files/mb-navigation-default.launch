@@ -25,15 +25,17 @@
   <node pkg="leg_detector" type="leg_detector" name="leg_detector" args="scan:=base_scan_filter $(find leg_detector)/config/trained_leg_detector.yaml"/>
   <node name="velocity_tracker" pkg="people_velocity_tracker" type="tracker.py" respawn="true" />
     <!-- <node pkg="people_tracking_filter" type="people_tracker" name="people_tracker" output="screen"/> -->
-
-  <node pkg="move_base" type="move_base" respawn="true" name="move_base" output="screen" required="true">
-    <param name="base_global_planner" value="global_planner/GlobalPlanner"/>
-    <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
+  <node name="localization" pkg="amcl" type="amcl" args="scan:=laser_birdcage_r2000/scan_filtered" output="screen" required="true">
+    <rosparam file="/config/amcl.yaml" command="load" />
+  </node>
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen" required="true">
+	  <!--<param name="base_global_planner" value="global_planner/GlobalPlanner"/>
+    <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" /> -->
     <rosparam file="/config/costmaps/costmap_common_params.yaml" command="load" ns="global_costmap" />
     <rosparam file="/config/costmaps/costmap_common_params.yaml" command="load" ns="local_costmap" />
     <rosparam file="/config/move_base_params.yaml" command="load" />
     <rosparam file="/config/global/global_planner_params.yaml" command="load" />
-    <rosparam file="/config/local/dwa_diff_local_planner_params.yaml" command="load" />
+    <rosparam file="/config/local/tp_local_planner_params.yaml" command="load" />
     <rosparam file="/config/costmaps/local_costmap_params.yaml" command="load" />
     <rosparam file="/config/costmaps/global_costmap_params.yaml" command="load" />
   </node>
