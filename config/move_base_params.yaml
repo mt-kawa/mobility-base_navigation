@@ -29,8 +29,8 @@ max_planning_retries: 35
 
 ## Planners - TODO: How to define properly through config?
 # local planner - default is trajectory rollout
-# base_local_planner: "dwa_local_planner/DWAPlannerROS"
-# base_global_planner: "global_planner/GlobalPlanner" #alternatives: navfn/NavfnROS, carrot_planner/CarrotPlanner
+base_local_planner: "dwa_local_planner/DWAPlannerROS"
+base_global_planner: "global_planner/GlobalPlanner" #alternatives: navfn/NavfnROS, carrot_planner/CarrotPlanner
 
 ## recovery behaviors; avoid spinning, but needs fall-back replanning
 # recovery_behavior_enabled: true
